@@ -1,0 +1,13 @@
+title Game creation flow
+
+Users->YahtzeeGameImpl: start game 
+loop player number
+YahtzeeGameImpl->Player: create
+Player->Player: initialize 13 category fields
+end
+
+loop 5
+YahtzeeGameImpl->Die: create
+end
+YahtzeeGameImpl->YahtzeeGameImpl: initialize round
+YahtzeeGameImpl->YahtzeeGameImpl: initialize dice retry count

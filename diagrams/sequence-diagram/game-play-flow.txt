@@ -1,0 +1,29 @@
+title Game play flow
+
+activate User
+User ->YahtzeeGameImpl:roll 5 dice
+YahtzeeGameImpl ->Die:roll
+Die-->User:5 dice
+alt case 1: choose category
+User->YahtzeeGameImpl:get available category combination (player, dice)
+YahtzeeGameImpl->Player:getScoresOfAvailableCombinations (dice)
+
+loop as much as the player's unfilled category field
+Player->Category: calculateCategoryScore(category type, dice)
+Category-->Player:score
+end
+
+
+Player-->User:available category list with each score
+#YahtzeeGameImpl-->User:available category list with each score
+User->YahtzeeGameImpl: choose category
+YahtzeeGameImpl->Player: fill the category
+else case 2: roll dice again (max 3 times)
+User ->YahtzeeGameImpl:roll all or certain dice
+YahtzeeGameImpl ->Die:roll
+Die-->User:5 dice
+note over User, Category: The same process goes as case 1 above
+end
+deactivate User
+
+
