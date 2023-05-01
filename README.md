@@ -9,7 +9,7 @@
 
 ![image](https://user-images.githubusercontent.com/49010295/235519657-430ecb6b-0da9-4145-aec9-6aa9616c5773.png)
 
-## Coverage
+## Test Coverage
 <img src="https://user-images.githubusercontent.com/49010295/234103472-7d9bbb14-f066-47e3-b97d-e822f7e3891e.png" width="500">
 
 ## Rule
